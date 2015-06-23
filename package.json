@@ -1,0 +1,41 @@
+{
+  "author": "Vladimir Grinenko <i@tadatuta.com>",
+  "description": "HTML to BEMJSON tech for ENB",
+  "name": "enb-html-to-bemjson",
+  "version": "0.1.0",
+  "repository": "git://github.com/tadatuta/enb-html-to-bemjson",
+  "homepage": "https://github.com/tadatuta/enb-html-to-bemjson",
+  "bugs": "https://github.com/tadatuta/enb-html-to-bemjson/issues",
+  "licenses": [
+    {
+      "type": "MPL-2.0",
+      "url": "https://github.com/tadatuta/enb-html-to-bemjson/blob/master/LICENSE.txt"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Vladimir Grinenko",
+      "email": "i@tadatuta.com"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "peerDependencies": {
+    "enb": ">= 0.12.0 < 1.0.0"
+  },
+  "dependencies": {
+    "html2bemjson": "^1.1.0",
+    "vow": "0.4.5"
+  },
+  "devDependencies": {
+    "enb": ">= 0.12.0 < 1.0.0",
+    "enb-validate-code": "0.0.1",
+    "jshint": "2.5.4",
+    "jscs": "1.4.5"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "jshint . && jscs -c .jscs.js ."
+  }
+}
