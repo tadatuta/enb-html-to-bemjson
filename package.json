@@ -2,7 +2,7 @@
   "author": "Vladimir Grinenko <i@tadatuta.com>",
   "description": "HTML to BEMJSON tech for ENB",
   "name": "enb-html-to-bemjson",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "git://github.com/tadatuta/enb-html-to-bemjson",
   "homepage": "https://github.com/tadatuta/enb-html-to-bemjson",
   "bugs": "https://github.com/tadatuta/enb-html-to-bemjson/issues",
