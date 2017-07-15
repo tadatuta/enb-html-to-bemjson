@@ -24,13 +24,20 @@ module.exports = require('enb/lib/build-flow').create()
 
     .useSourceFilename('htmlFile', '?.html')
     .optionAlias('htmlFile', 'htmlFileTarget')
+    .optionAlias('htmlFile', 'source')
 
     .optionAlias('target', 'destTarget')
+    .defineOption('opts', {})
     .builder(function(htmlFileName) {
+        var opts = this._opts;
 
         return vfs.read(htmlFileName, 'utf-8')
             .then(function(html) {
-                return '(' + require('util').inspect(html2bemjson.convert(html), { depth: null }) + ')';
+                return '(' +
+                    require('util').inspect(
+                        html2bemjson.convert(html, opts),
+                        { depth: null }) +
+                ')';
             })
             .fail(function(data) {
                 console.log('Fail with: ', data);
